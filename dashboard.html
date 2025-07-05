@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h1>👑 ADMIN DASHBOARD</h1>
+    <button onclick="logout()">Đăng xuất</button>
+
+    <section>
+      <h2>📋 Quản lý thành viên</h2>
+      <input type="text" id="newUser" placeholder="Tên đăng nhập">
+      <button onclick="addUser()">Thêm thành viên</button>
+      <ul id="userList"></ul>
+    </section>
+
+    <section>
+      <h2>📂 Quản lý tài liệu</h2>
+      <input type="text" id="docTitle" placeholder="Tên tài liệu">
+      <input type="file" id="docFile">
+      <button onclick="uploadDoc()">Tải lên</button>
+      <ul id="docList"></ul>
+    </section>
+
+    <section>
+      <h2>🧪 Tạo phòng thi ảo (TSA)</h2>
+      <input type="text" id="roomName" placeholder="Tên phòng thi">
+      <textarea id="roomDesc" placeholder="Mô tả hoặc đề bài..."></textarea>
+      <button onclick="createRoom()">Tạo phòng</button>
+      <ul id="roomList"></ul>
+    </section>
+  </div>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
